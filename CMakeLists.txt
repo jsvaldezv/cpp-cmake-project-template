@@ -11,6 +11,8 @@ project(${PROJECT_NAME}
         DESCRIPTION "C++ Project Template"
         LANGUAGES CXX)
 
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/CMake")
+
 # Make C++ a hard requirement
 set(CXX_STANDARD_REQUIRED ON)
 set(CMAKE_XCODE_GENERATE_SCHEME OFF)
@@ -37,8 +39,9 @@ source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR} PREFIX "" FILES ${SOURCE_FILES})
 # Add pre release debug flag
 target_compile_definitions(${PROJECT_NAME} PUBLIC $<$<CONFIG:PreRelease>:PRE_RELEASE=1>)
 
-# ========================================= IDE env variables ========================================== #
-set(CMAKE_XCODE_SCHEME_ENVIRONMENT OS_ACTIVITY_MODE=disable)
+# ========================================= Formatting ========================================== #
+include(Formatter)
+add_clang_format_target(format-code ${PROJECT_SOURCE_DIR})
 
 # ============================================= Warnings =============================================== #
 if("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
