@@ -32,8 +32,6 @@ npm install -g clang-format
 
 ## How to build project and open IDE? (recommended)
 
-Run script and follow instructions
-
 macOS
 ```
 sh Scripts/macOS/build_xcode.sh
@@ -48,10 +46,10 @@ start Scripts/windows/build_vs22.bat
 
 macOS
 ```
-sh Scripts/macOS/format_macos.sh
+sh Scripts/macOS/formatter.sh
 ```
 
 Windows
 ```
-start Scripts/windows/format_win.bat
+start Scripts/windows/formatter.bat
 ```
