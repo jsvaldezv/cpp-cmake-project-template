@@ -39,9 +39,8 @@ source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR} PREFIX "" FILES ${SOURCE_FILES})
 # Add pre release debug flag
 target_compile_definitions(${PROJECT_NAME} PUBLIC $<$<CONFIG:PreRelease>:PRE_RELEASE=1>)
 
-# ========================================= Formatting ========================================== #
-include(Formatter)
-add_clang_format_target(format-code ${PROJECT_SOURCE_DIR})
+# ========================================= IDE env variables ========================================== #
+set(CMAKE_XCODE_SCHEME_ENVIRONMENT OS_ACTIVITY_MODE=disable)
 
 # ============================================= Warnings =============================================== #
 if("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
