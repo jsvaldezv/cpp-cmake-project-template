@@ -18,14 +18,14 @@ To build the application on Windows you will need Visual Studio with Clang suppo
 
 ### Clang-format
 
-MacOS
+macOS
 ```
 brew install clang-format
 ```
 
 Windows
 
-You can get it as part of the LLVM compiler or Clang Compilar build for Windows. Or you can try it install with npm
+You can get it as part of the LLVM compiler or Clang Compiler build for Windows. You also can try to install it with npm
 ```
 npm install -g clang-format
 ```
@@ -34,20 +34,24 @@ npm install -g clang-format
 
 Run script and follow instructions
 
-### macOS
-`sh Scripts/macOS/build_xcode.sh`
-
-### Windows
-`start Scripts/windows/build_vs22.bat`
-
-## How to format code?
-
-MacOS: 
+macOS
 ```
-sh Scripts/format_macos.sh
+sh Scripts/macOS/build_xcode.sh
 ```
 
 Windows
 ```
-start Scripts/format_win.bat
+start Scripts/windows/build_vs22.bat
+```
+
+## How to format code?
+
+macOS
+```
+sh Scripts/macOS/format_macos.sh
+```
+
+Windows
+```
+start Scripts/windows/format_win.bat
 ```
