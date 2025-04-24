@@ -1,6 +1,6 @@
-# C++ Project Template
+# C++ Project Template with CMake
 
-C++ Project Template with CMake
+This is a minimal and clean C++ project template configured with CMake to help you get started quickly with modern C++ development. It includes a basic folder structure and build configuration that can easily scale for larger applications or libraries.
 
 ## Pre-requisites
 
