@@ -20,10 +20,7 @@ set GENERATOR="Visual Studio 17 2022"
 echo ==========================================
 echo       Creating %GENERATOR% project...
 
-cmake -G %GENERATOR% -B VS22 -T ClangCL ^
-	-D PROJECT_NAME=%PROJECT_NAME% ^
-	-D PROJECT_VERSION=%PROJECT_VERSION% ^
-	-D CPP_VERSION=%CPP_VERSION%
+cmake -G %GENERATOR% -B VS22 -T ClangCL
 
 echo ==========================================
 echo            Opening %GENERATOR%...

@@ -18,10 +18,7 @@ echo "=========================================="
 echo "         Creating $GENERATOR project..."
 echo "=========================================="
 
-cmake -G $GENERATOR -B $GENERATOR \
-	-D PROJECT_NAME=$PROJECT_NAME \
-	-D PROJECT_VERSION=$PROJECT_VERSION \
-	-D CPP_VERSION=$CPP_VERSION
+cmake -G $GENERATOR -B $GENERATOR
 
 echo "=========================================="
 echo "             Opening $GENERATOR..."

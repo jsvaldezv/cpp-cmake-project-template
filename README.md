@@ -16,40 +16,26 @@ To build the application on Windows you will need Visual Studio with Clang suppo
     * C++ Clang Compiler for Windows
     * C++ Clang-cl for v143 build tools (x64/x86)
 
-### Clang-format
+## How to build project with CMake?
 
-macOS
+Project configuration
 ```
-brew install clang-format
+cmake -S . -B build
 ```
 
-Windows
-
-You can get it as part of the LLVM compiler or Clang Compiler build for Windows. You also can try to install it with npm
+Compilation
 ```
-npm install -g clang-format
+cmake --build build
 ```
 
 ## How to build project and open IDE? (recommended)
 
 macOS
 ```
-sh Scripts/macOS/build_xcode.sh
+sh Scripts/build_xcode.sh
 ```
 
 Windows
 ```
-start Scripts/windows/build_vs22.bat
-```
-
-## How to format code?
-
-macOS
-```
-sh Scripts/macOS/formatter.sh
-```
-
-Windows
-```
-start Scripts/windows/formatter.bat
+start Scripts/build_vs22.bat
 ```
